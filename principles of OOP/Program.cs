@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using static principles_of_OOP.DataAbstraction;
 using static principles_of_OOP.Encapsulation;
 using static principles_of_OOP.Inheritance;
 using static principles_of_OOP.Polymorphism;
@@ -19,5 +20,11 @@ bicycle.DisplayInfo();
 Console.WriteLine("===Polymorphism===");
 Animal myDog = new Dog();
 Animal myCat = new Cat();
-myDog.MakeSound();  // Output: Woof! Woof!
-myCat.MakeSound();  // Output: Meow! Meow!
+myDog.MakeSound();  
+myCat.MakeSound();
+
+Console.WriteLine("===Data Abstraction===");
+Shape circle = new Circle(5);
+Shape rectangle = new Rectangle(4, 6);
+Console.WriteLine($"Площадь круга: {circle.GetArea()}");
+Console.WriteLine($"Площадь прямоугольника: {rectangle.GetArea()}");
